@@ -1,3 +1,8 @@
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote   = 'git@github.com:jina/clarityconf.com.git'
+  deploy.branch   = 'gh-pages'
+end
 ###
 # Compass
 ###
