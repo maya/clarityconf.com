@@ -6,6 +6,8 @@ clarityconf.com
 3. Run `gem install bundler`.
 4. Run `bundle install`.
 5. Run `middleman server`.
+6. If you want to see locally that the site built okay, type `middleman build` to see the static site it generates.
+7. To deploy to public site (clarityconf.com) type `middleman deploy --build-before`.
 
 Directories:
 * `/source` -- source files
