@@ -1,7 +1,7 @@
 clarityconf.com
 ===============
 
-1. In your projects folder, clone this repo.
+1. In your projects folder, clone this repo: `git clone git@github.com:jina/clarityconf.com.git`
 2. Run `cd clarityconf.com`
 3. Run `gem install bundler`.
 4. Run `bundle install`.
