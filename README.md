@@ -7,7 +7,7 @@ clarityconf.com
 4. Run `bundle install`.
 5. Run `middleman server`.
 
-
+Directories:
 * `/source` -- source files
 * `/data` -- data stored as yaml or json
 * `/helpers` -- where you can store ruby helpers
