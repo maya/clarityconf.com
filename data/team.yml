@@ -1,0 +1,11 @@
+profiles:
+  - slug: 'jina'
+    name: 'Jina'
+    bio: 'Short bio coming soon.'
+    url: 'http://jina.me'
+  - slug: 'michael'
+    name: 'Michael'
+    bio: 'Short bio coming soon.'
+  - slug: 'chris'
+    name: 'Chris'
+    bio: 'Short bio coming soon.'
