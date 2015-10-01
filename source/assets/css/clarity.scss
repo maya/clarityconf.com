@@ -13,6 +13,11 @@ html {
   text-shadow: 0 1px 0 rgba(white, .25);
 }
 
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
 body { font: 1rem/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a {
@@ -36,7 +41,7 @@ h1,
 h2,
 p,
 ul,
-ol { padding: .5rem 0; }
+ol { padding: .75rem 0; }
 
 h1,
 h2 { font-weight: normal; }
@@ -84,6 +89,7 @@ ol {
 
   ul {
     margin: 0;
+    padding: 0;
     list-style: none;
   }
 
@@ -108,7 +114,7 @@ ol {
 .mailchimp { margin: 0 auto; }
 
 .container {
-  padding: 6rem 0;
+  padding: 3rem 0;
   max-width: 60rem;
 }
 
@@ -140,16 +146,66 @@ ol {
   }
 }
 
-.down-arrow {
-  font: {
-    weight: bold;
-    size: 2rem;
-  }
-}
-
 .contentinfo {
   padding: 1rem 0;
   box-shadow: 0 -1px 1px rgba(#abc, .25);
 }
 
 .center { text-align: center; }
+
+
+
+// From HTML5 Boilerplate
+
+@media print {
+  * {
+    &,
+    &:before,
+    &:after,
+    &:first-letter,
+    &:first-line {
+      background: transparent !important;
+      text-shadow: none !important;
+      color: #000 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  a {
+    &,
+    &:visited { text-decoration: underline; }
+
+    &[href]:after { content: " (" attr(href) ")"; }
+
+
+    &[href^="#"],
+    &[href^="javascript:"] {
+      &:after { content: ""; }
+    }
+  }
+
+  abbr[title]:after { content: " (" attr(title) ")"; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead { display: table-header-group; }
+
+  tr,
+  img { page-break-inside: avoid; }
+
+  img { max-width: 100% !important; }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 { page-break-after: avoid; }
+}
