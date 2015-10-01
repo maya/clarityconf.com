@@ -7,43 +7,112 @@
   &:after { box-sizing: border-box; }
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 html {
-  display: table;
   font-size: 100%;
-  text-align: center;
-  background: #abc linear-gradient(90deg, #abc 10%, #fff 90%);
-  color: #111;
+  color: #1C2833;
   text-shadow: 0 1px 0 rgba(white, .25);
 }
 
-body {
-  display: table-cell;
-  width: 30rem;
-  font: 1rem/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  vertical-align: middle;
+body { font: 1rem/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #0F4880;
+
+  &:hover,
+  &:focus { color: #002A2A; }
 }
 
 h1,
-p {
+h2,
+p,
+ul,
+ol {
   margin: 0;
-  padding: .5rem 0;
+  padding: 0;
 }
+
+h1,
+h2,
+p,
+ul,
+ol { padding: .5rem 0; }
+
+h1,
+h2 { font-weight: normal; }
 
 h1 { text-transform: lowercase; }
 
-.page {
-  margin: 0 auto;
-  padding: 2rem;
-  width: 30rem;
-  background: rgba(white, .25);
-  box-shadow: 0 1px 1px rgba(black, .25);
+ul,
+ol {
+  margin-left: 2rem;
 }
+
+.page {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: #abc linear-gradient(90deg, #abc 10%, #fff 90%);
+  box-shadow: 0 1px 1px rgba(white, .25);
+  z-index: 1;
+}
+
+.page-content {
+  display: table-cell;
+  padding: 0 2rem;
+  vertical-align: middle;
+}
+
+.navigation,
+.contentinfo {
+  padding: 0 2rem;
+  font-size: .75rem;
+  text: {
+    transform: uppercase;
+    align: center;
+  }
+  background: rgba(white, .75);
+  z-index: 2;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  box-shadow: 0 1px 1px rgba(#abc, .25);
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+
+    & + li { margin-left: .25rem; }
+  }
+
+  a {
+    display: block;
+    padding: 1rem;
+
+    &:hover,
+    &:focus { background: rgba(white, .5); }
+
+    &:active { background: rgba(white, .75); }
+  }
+}
+
+.container,
+.mailchimp { margin: 0 auto; }
+
+.container {
+  padding: 6rem 0;
+  max-width: 60rem;
+}
+
+.mailchimp { max-width: 30rem; }
 
 #mc_embed_signup {
 
@@ -70,3 +139,17 @@ h1 { text-transform: lowercase; }
     text-shadow: 0 -1px 0 rgba(black, .75);
   }
 }
+
+.down-arrow {
+  font: {
+    weight: bold;
+    size: 2rem;
+  }
+}
+
+.contentinfo {
+  padding: 1rem 0;
+  box-shadow: 0 -1px 1px rgba(#abc, .25);
+}
+
+.center { text-align: center; }
