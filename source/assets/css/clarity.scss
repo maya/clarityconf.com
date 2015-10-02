@@ -9,7 +9,7 @@
 
 html {
   font-size: 100%;
-  color: #1C2833;
+  color: #004055;
   text-shadow: 0 1px 0 rgba(white, .25);
 }
 
@@ -22,10 +22,10 @@ body { font: 400 1rem/1.5 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial,
 
 a {
   text-decoration: none;
-  color: #0F4880;
+  color: #483D8B;
 
   &:hover,
-  &:focus { color: #002A2A; }
+  &:focus { color: #322A60; }
 }
 
 h1,
@@ -61,19 +61,25 @@ legend {
 
 h1,
 h2,
-legend {
+legend { line-height: 1; }
+
+h1 {
   font: {
     weight: 300;
-    size: 1rem;
+    size: 3rem;
   }
-  line-height: 1;
-  text-transform: lowercase;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
 }
 
-h1 { font-size: 2rem; }
-
 h2,
-legend { font-size: 1.5rem; }
+legend {
+  font: {
+    weight: 700;
+    size: 1.5rem;
+  }
+  text-transform: lowercase;
+}
 
 ul,
 ol { margin-left: 2rem; }
@@ -153,23 +159,20 @@ strong { font-weight: 700; }
 
 .mailchimp {
   margin-top: 1rem;
-  max-width: 16rem;
+  max-width: 20rem;
 }
 
 fieldset { font-weight: 700; }
 
 #mc_embed_signup {
-  text-align: center;
 
-  form { padding: 0; }
+  form { padding: 0;
+  text-align: center;}
 
   label {
-    padding-bottom: .5rem;
-    font: {
-      weight: 700;
-      size: .75rem;
-    }
-    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: -9999em;
   }
 
   input.email,
@@ -192,10 +195,13 @@ fieldset { font-weight: 700; }
   }
 
   .button {
-    background-color: #0F4880;
+    background-color: #483D8B;
     box-shadow: 0 1px 1px rgba(#abc, .75);
     color: #fff;
     cursor: pointer;
+
+    &:hover,
+    &:focus { background-color: #322A60; }
   }
 }
 
