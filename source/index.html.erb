@@ -1,6 +1,10 @@
 ---
 title: Clarity
 ---
+<% content_for :css_pre do %>
+  <%= stylesheet_link_tag "//cdn-images.mailchimp.com/embedcode/slim-081711.css" %>
+<% end %>
+
 <header role="banner" class="page" id="about">
   <div class="page-content">
     <div class="container center">
@@ -8,7 +12,7 @@ title: Clarity
       <p>A Style Guide Conference</p>
       <p>
         San Francisco, California
-        &bull;
+        <br />
         March 31<sup>st</sup>&ndash;April 1<sup>st</sup>, 2016
       </p>
       <nav role="navigation" class="navigation">
@@ -17,23 +21,23 @@ title: Clarity
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#location">Location</a></li>
           <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#sponsors">Sponsors</a></li>
         </ul>
       </nav>
 
       <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup" class="mailchimp">
         <form action="//sushiandrobots.us2.list-manage.com/subscribe/post?u=ffc4c32536aeadc48a87ebe84&amp;id=7c06e6d19d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-            <label for="mce-EMAIL">Stay in touch</label>
-            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+          <fieldset id="mc_embed_signup_scroll">
+            <legend>Sign Up for Updates</legend>
+            <label for="mce-EMAIL">Email</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" required>
             <div style="position: absolute; left: -5000px;">
               <input type="text" name="b_ffc4c32536aeadc48a87ebe84_7c06e6d19d" tabindex="-1" value="">
             </div>
             <div class="clear">
               <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">Subscribe</button>
             </div>
-          </div>
+          </fieldset>
         </form>
       </div>
       <!--End mc_embed_signup-->
@@ -45,7 +49,53 @@ title: Clarity
   <div class="page-content">
     <div class="container center">
       <h2>Speakers</h2>
-      <p>To be announced soon</p>
+      <ul class="speakers">
+        <li>
+          <figure>
+            <p>
+              <%= link_to image_tag("speakers/brad-frost.png",
+                                    alt: "Brad Frost"),
+                          "http://bradfrost.com/" %>
+            </p>
+            <figcaption>
+              <dl>
+                <dt>
+                  <strong>
+                    <a href="http://bradfrost.com/">Brad Frost</a>
+                  </strong>
+                  <br />
+                  Web Designer
+                </dt>
+                <dd>
+                  <a href="http://bradfrost.com/">Brad Frost</a> is a web
+                  designer, speaker, writer, and consultant located in
+                  beautiful Pittsburgh, PA. He’s passionate about creating Web
+                  experiences that look and function beautifully on a
+                  never-ending stream of connected devices, and is constantly
+                  <a href="https://twitter.com/brad_frost">tweeting</a>,
+                  <a href="http://bradfrost.com/blog/">writing</a> and
+                  <a href="http://bradfrost.com/speaking/">speaking</a> about
+                  it. He’s the author of
+                  <a href="http://atomicdesign.bradfrost.com/">
+                    Atomic Design
+                  </a>, and has also helped create several tools and resources
+                  for web designers, including
+                  <a href="http://bradfrost.github.io/this-is-responsive/">
+                    This Is Responsive
+                  </a>,
+                  <a href="http://patternlab.io/">Pattern Lab</a>,
+                  <a href="http://styleguides.io/">Styleguides.io</a>,
+                  <a href="http://wtfmobileweb.com/">WTF Mobile Web</a>, and
+                  <a href="http://mobilewebbestpractices.com/">
+                    Mobile Web Best Practices
+                  </a>.
+                </dd>
+              </dl>
+            </figcaption>
+          </figure>
+        </li>
+      </ul>
+      <p>More to be announced soon&hellip;</p>
     </div>
   </div>
 </div>
@@ -76,7 +126,11 @@ title: Clarity
   <div class="page-content">
     <div class="container center">
       <h2>Sponsors</h2>
-      <p><a href="http://twitter.com/salesforceux">Salesforce UX</a></p>
+      <p>
+        <%= link_to image_tag("sponsors/salesforce.svg", alt: "Salesforce UX",
+                                                         height: 96),
+                    "http://twitter.com/salesforceux" %>
+      </p>
       <p>
         Interested in sponsoring? Contact
         <a href="http://jina.me/contact/">Jina</a>.
@@ -85,6 +139,7 @@ title: Clarity
   </div>
 </div>
 <footer role="contentinfo" class="contentinfo">
-  <p><a href="/">Clarity</a> is presented by <a href="http://twitter.com/jina">Jina</a>, <a href="http://twitter.com/topherauyeung">Christopher</a>, &#38; <a href="http://twitter.com/michaelyuan">Michael</a></p>
-  <p><a href="coc">Code of Conduct</a></p>
+  <p><a href="/">Clarity</a> is presented by <a href="http://twitter.com/jina">Jina</a>, <a href="http://twitter.com/topherauyeung">Christopher</a>, &#38; <a href="http://twitter.com/michaelyuan">Michael</a>
+  &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+  <a href="coc">Code of Conduct</a></p>
 </footer>
