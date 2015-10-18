@@ -1,0 +1,35 @@
+speakers:
+  - name:  'Brad Frost'
+    id:    'brad-frost'
+    url:   'http://bradfrost.com/'
+    title: 'Web Designer'
+    bio:   "<a href='http://bradfrost.com/'>Brad Frost</a> is a web designer,
+            speaker, writer, and consultant located in beautiful Pittsburgh,
+            <abbr title='Pennsylvania'>PA</abbr>. He's passionate about
+            creating Web experiences that look and function beautifully on a
+            never-ending stream of connected devices, and is constantly
+            <a href='https://twitter.com/brad_frost'>tweeting</a>,
+            <a href='http://bradfrost.com/blog/'>writing</a> and
+            <a href='http://bradfrost.com/speaking/'>speaking</a> about it.
+            He's the author of
+            <a href='http://atomicdesign.bradfrost.com/'>Atomic Design</a>,
+            and has also helped create several tools and resources for web
+            designers, including
+            <a href='http://bradfrost.github.io/this-is-responsive/'>This is
+            Responsive</a>, <a href='http://patternlab.io/'>Pattern Lab</a>,
+            <a href='http://styleguides.io/'>Styleguides.io</a>,
+            <a href='http://wtfmobileweb.com/'><abbr title='What the
+            Fuck'>WTF</abbr> Mobile Web</a>, and
+            <a href='http://mobilewebbestpractices.com/'>Mobile Web Best
+            Practices</a>."
+
+  - name:  'Cordelia McGee-Tubb'
+    id:    'cordelia-mcgee-tubb'
+    url:   'http://cordeliadillon.com/'
+    title: 'Accessibility Engineer, Dropbox'
+    bio:   "Cordelia McGee-Tubb is a developer, designer, and cartoonist
+            focused on making the web better for everyone. She is a currently
+            a web accessibility developer at Dropbox. An advocate for digital
+            literacy, Cordelia teaches basic computer and internet skills to
+            senior citizens. In her spare time, she draws autobiographical
+            comics and collects hats shaped like food."

@@ -1,0 +1,56 @@
+/*! ==========================================================================
+ *  CLARITY
+ */
+
+@charset "UTF-8";
+
+
+
+@import
+
+  // VENDOR
+  // -------------------------------------------------------------------------
+
+  "modular-scale",
+
+
+
+  // STYLES
+  // -------------------------------------------------------------------------
+
+  "variables",
+  "mixins";
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+body {
+  padding-top: 4.5rem;
+  overflow-y: scroll;
+}
+
+.responsive {
+  form { max-width: none; }
+}
+
+#frames {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.frame {
+  margin-right: $size-medium;
+  float: left;
+
+  &:last-child { margin-right: 0; }
+}
+
+iframe {
+  @include shadow;
+  border: 0;
+}

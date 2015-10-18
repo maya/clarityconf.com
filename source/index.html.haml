@@ -1,0 +1,104 @@
+---
+title: Clarity
+page: home
+---
+
+%section.section#about
+  .section__content
+    %h1 A Style Guide Conference
+
+    %p
+      San Francisco, California
+
+      %br
+
+      March 31<sup>st</sup>&ndash;April 1<sup>st</sup>, 2016
+
+    %form(action='//clarityconf.us2.list-manage.com/subscribe/post?u=ffc4c32536aeadc48a87ebe84&amp;id=7c06e6d19d' method='post' target='_blank')
+      %p
+        %label(for='mce-EMAIL') Enter Email for Updates
+
+        %br
+
+        %input(type='email' value='' placeholder='you@email.com' id='EMAIL' required)
+
+      %div(style='position: absolute; left: -9999em;')
+        %input(type='text' id='b_ffc4c32536aeadc48a87ebe84_7c06e6d19d' tabindex='-1' value='')
+
+      %p
+        %button(type='submit') Subscribe
+
+
+
+%section.section#speakers
+  .section__content
+    %header
+      %h2 Speakers
+
+    %ul.grid.list--blocks
+      - for speaker in data.content.speakers
+        %li.grid__column{id: speaker.id}
+          %dl
+            %dt.media.media--faux-center
+              .media__figure
+                = link_to speaker.url do
+                  = image_tag 'speakers/' + speaker.id + '.png', alt: speaker.name, class: 'avatar'
+
+              .media__body
+                %strong= link_to speaker.name, speaker.url
+
+                %br
+
+                = speaker.title
+
+            %dd= speaker.bio
+
+    %p More to be announced soon...
+
+
+
+%section.section#schedule
+  .section__content
+    %header
+      %h2 Schedule
+
+    %p Schedule to be announced...
+
+
+
+%section.section#location
+  .section__content
+    %header
+      %h2 Location
+
+    %p
+      San Francisco, California
+
+      %br
+
+      Venue to be announced...
+
+
+
+%section.section#register
+  .section__content
+    %header
+      %h2 Register
+
+    %p Coming Soon...
+
+
+
+%section.section#sponsors
+  .section__content
+    %header
+      %h2 Sponsors
+
+    %p
+      = link_to 'http://twitter.com/salesforceux' do
+        = image_tag 'sponsors/salesforce.svg', alt: 'Salesforce UX', width: 137, height: 96
+
+    %p
+      Interested in sponsoring? Contact
+      = succeed '.' do
+        = link_to 'Jina', 'http://jina.me/contact'

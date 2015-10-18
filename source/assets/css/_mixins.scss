@@ -1,0 +1,8 @@
+@mixin square($size) {
+   width: $size;
+  height: $size;
+}
+
+@mixin shadow($color: rgba($marvel, .125)) {
+  box-shadow: 0 $size-hairline $size-hairline $color;
+}

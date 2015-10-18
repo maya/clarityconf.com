@@ -1,0 +1,31 @@
+---
+layout: minimal
+title: 'Responsive Test'
+---
+
+- content_for :head_css do
+  = stylesheet_link_tag 'vendor/responsive'
+
+- content_for :foot_js do
+  = javascript_include_tag  'vendor/responsive'
+
+%header.banner#url(role="banner")
+  %form(method="post")
+    <input type="text" placeholder="Test your own site... type the url and hit enter" />
+
+#frames
+  #inner
+    .frame#f1
+      <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="240" height="320"></iframe>
+
+    .frame#f2
+      <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="320" height="480"></iframe>
+
+    .frame#f3
+      <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="480" height="640"></iframe>
+
+    .frame#f4
+      <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="768" height="1024"></iframe>
+
+    .frame#f5
+      <iframe sandbox="allow-same-origin allow-forms allow-scripts" seamless width="1024" height="768"></iframe>
