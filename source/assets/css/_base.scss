@@ -97,7 +97,8 @@ a {
 abbr[title] { cursor: help; }
 
 strong,
-b {
+b,
+th {
   font-weight: $font-weight-regular;
   color: $black;
 }
@@ -109,7 +110,7 @@ b {
 #{headings()} {
   @extend %margin-reset;
   margin: {
-       top: $size-large;
+       top: $size-xx-large;
     bottom: $size-large;
   }
   font-weight: $font-weight-regular;
@@ -126,6 +127,11 @@ h2 {
   padding-bottom: $size-x-small;
 }
 
+h3 {
+  text-transform: uppercase;
+  letter-spacing: .0625rem;
+}
+
 %block-text {
   @extend %margin-reset;
   margin-bottom: $size-large;
@@ -139,9 +145,12 @@ ul {
   @extend %margin-reset;
   @extend %padding-reset;
   list-style: none;
+
+  .content & { list-style: disc; }
 }
 
-ol {
+ol,
+.content ul {
   @extend %block-text;
   padding: 0 0 0 $size-x-large;
 }
@@ -161,6 +170,33 @@ dt {
 }
 
 dd { @extend %margin-reset; }
+
+table {
+  margin-bottom: $size-large;
+  width: 100%;
+  table-layout: fixed;
+}
+
+caption {
+  padding: {
+    right: $size-medium;
+     left: $size-medium;
+  }
+  text-align: left;
+
+  span { @extend h2; }
+}
+
+th,
+td {
+  border-bottom: $border;
+  padding: $size-x-small $size-medium;
+  vertical-align: baseline;
+
+  &:first-child { width: 33.33333333333333%; }
+}
+
+td { text-align: center; }
 
 form p { @extend %margin-bottom-small; }
 
