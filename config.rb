@@ -7,7 +7,7 @@ activate :autoprefixer do |config|
 end
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.remote   = 'git@github.com:jina/clarityconf.com.git'
+  deploy.remote   = 'git@github.com:sushiandrobots/clarityconf.com.git'
   deploy.branch   = 'gh-pages'
 end
 activate :directory_indexes
