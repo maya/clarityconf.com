@@ -41,18 +41,14 @@ behavior:
     name: Modernizr
   -
     name: jQuery
-  -
-    name: jQuery Balance Text
-  -
-    name: jQuery Validate
-  -
-    name: Responsive Design Testing
 
 misc:
   -
     name: Middleman
   -
     name: HTML5 Boilerplate
+  -
+    name: Bootstrap
   -
     name: GitHub
   -
