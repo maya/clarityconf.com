@@ -1,12 +1,9 @@
 //= require      ./vendor/_plugins
 //= require_tree ./vendor/plugins/
-//= require_tree ./lib
 //= require bootstrap/affix
 //= require bootstrap/alert
 //= require bootstrap/button
-//= require bootstrap/carousel
 //= require bootstrap/collapse
-//= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require bootstrap/scrollspy
 //= require bootstrap/tab
