@@ -3,8 +3,6 @@ See a bug or typo? Have an idea? Just do the following:
 
 * Write a detailed description of what you're adding in the pull request
   (screenshots help).
-* Check out the style guide for design & code standards.
-* Add any new UI elements to the style guide.
 * Submit the pull request to the `master` branch.
 
 ## Development
