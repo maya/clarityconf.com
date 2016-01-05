@@ -6,7 +6,8 @@ A style guide conference.
 If you would like to contribute to the site, please visit the 
 [contributing guide][guide] to get started.
 
-[guide]: CONTRIBUTING.md
-
 ## License
-Please see the accompanying `LICENSE` file.
+Please see the accompanying [license].
+
+[guide]: CONTRIBUTING.md
+[license]: LICENSE
