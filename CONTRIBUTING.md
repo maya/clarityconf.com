@@ -17,13 +17,13 @@ See a bug or typo? Have an idea? Just do the following:
 7. To deploy to the public site, run `middleman deploy --build-before`.
 
 ## Resources
-* [Middleman](https://middlemanapp.com/) -- the static site generator we use.
-* [Sass](http://sass-lang.com) -- CSS preprocessor
+* [Middleman](https://middlemanapp.com/) — the static site generator we use.
+* [Sass](http://sass-lang.com) — CSS preprocessor
 
 ## Directories
-* `/source` --- source files
-* `/data` --- data stored as yaml or json
-* `/helpers` --- where you can store ruby helpers
-* `/build` --- the built files you get after running `middleman build`
+* `/source` — source files
+* `/data` — data stored as yaml or json
+* `/helpers` — where you can store ruby helpers
+* `/build` — the built files you get after running `middleman build`
 
 Thanks!
