@@ -1,115 +1,142 @@
 ---
-title: Clarity
+title: Welcome
 page: home
+title_reverse: true
 ---
 
-- content_for :head_css do
-  = stylesheet_link_tag '//cdn-images.mailchimp.com/embedcode/classic-081711.css'
-
-- content_for :foot_js do
-  = javascript_include_tag  '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'
-
-  :javascript
-    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
-
-%section.section#about
-  .section__content
+%section.section#about.jumbotron
+  .container
     %h1 A Style Guide Conference
 
-    %p
+    %p.lead
       San Francisco, California
-
       %br
+      March
+      = surround('31', '&ndash;April') do
+        %sup st
+      = surround('1', ',') do
+        %sup st
+      2016
 
-      March 31<sup>st</sup>&ndash;April 1<sup>st</sup>, 2016
-
-
-    #mc_embed_signup
-      %form.validate#mc-embedded-subscribe-form(action="//clarityconf.us2.list-manage.com/subscribe/post?u=ffc4c32536aeadc48a87ebe84&amp;id=7c06e6d19d" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate)
-        #mc_embed_signup_scroll
-          %p.mc-field-group
-            %label(for="mce-EMAIL") Enter Email for Updates
-            %input.required.email(type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder='you@email.com')
-
-          .clear#mce-responses
-            .response#mce-error-response(style="display: none")
-
-            .response#mce-success-response(style="display: none")
-
-          %div(style="position: absolute; left: -5000px;")
-            %input(type="text" name="b_ffc4c32536aeadc48a87ebe84_7c06e6d19d" tabindex="-1" value="")
-
-          .clear
-            %button.button#mc-embedded-subscribe(type="submit" name="subscribe") Subscribe
+    = partial 'mailchimp'
 
 
 
 %section.section#speakers
-  .section__content
-    %header
+  .container
+    .page-header
       %h2 Speakers
 
-    %ul.grid.list--blocks
-      - for speaker in data.content.speakers
-        %li.grid__column{id: speaker.id}
-          %dl
-            %dt.media.media--faux-center
-              .media__figure
-                = link_to speaker.url do
-                  = image_tag 'speakers/' + speaker.id + '.png', alt: speaker.name, class: 'avatar'
+    .row
+      - for speaker in data.speakers
+        .col-sm-12.col-lg-6
+          .media{id: speaker.id}
+            .media-left
+              = link_to speaker.url do
+                = image_tag 'speakers/' + speaker.id + '.png', alt: speaker.name, class: 'img-circle avatar media-object'
 
-              .media__body
-                %strong= link_to speaker.name, speaker.url
-
+            .media-body
+              %h3.media-heading
+                = link_to speaker.name, speaker.url
                 %br
+                %small= speaker.title
 
-                = speaker.title
+              = partial 'bios/' + speaker.id
 
-            %dd= speaker.bio
-
-    %p More to be announced soon...
-
-
-
-%section.section#schedule
-  .section__content
-    %header
-      %h2 Schedule
-
-    %p Schedule to be announced...
+    %p.text-muted More to be announced soon...
 
 
 
-%section.section#location
-  .section__content
-    %header
-      %h2 Location
+-#%section.section#schedule
+-#  .container
+-#    .page-header
+-#      %h2 Schedule
+-#
+-#    %ul.nav.nav-tabs.nav-justified(role="tablist")
+-#      %li.active(role='presentation')
+-#        = link_to '#friday', aria: {controls: 'friday'}, role: 'tab', -#data: {toggle: 'tab'}, class: 'active' do
+-#          Friday, March 31<sup>st</sup>
+-#
+-#      %li(role='presentation')
+-#        = link_to '#saturday', aria: {controls: 'saturday'}, role: 'tab-#', data: {toggle: 'tab'} do
+-#          Saturday, April 1<sup>st</sup>
+-#
+-#    .tab-content
+-#      .tab-pane.fade.in.active#friday(role='tabpanel')
+-#        %ul.list-group
+-#          %li.list-group-item
+-#            %span.badge 4:00
+-#
+-#            %h4.list-group-item-heading= lorem.sentence
+-#
+-#            %p.list-group-item-text= lorem.words(5)
+-#
+-#          %li.list-group-item
+-#            %span.badge 4:00
+-#
+-#            %h4.list-group-item-heading= lorem.sentence
+-#
+-#            %p.list-group-item-text= lorem.words(5)
+-#
+-#
+-#      .tab-pane.fade#saturday(role='tabpanel')
+-#        %ul.list-group
+-#          %li.list-group-item
+-#            %span.badge 4:00
+-#
+-#            %h4.list-group-item-heading= lorem.sentence
+-#
+-#            %p.list-group-item-text= lorem.words(5)
+-#
+-#          %li.list-group-item
+-#            %span.badge 4:00
+-#
+-#            %h4.list-group-item-heading= lorem.sentence
+-#
+-#            %p.list-group-item-text= lorem.words(5)
 
-    %p
-      San Francisco, California
-
-      %br
-
-      Venue to be announced...
 
 
+-#%section.section#location
+-#  .container
+-#    .page-header
+-#      %h2 Location
+-#
+-#    %p San Francisco, California
+-#
+-#    %p.text-muted Venue to be announced...
 
-%section.section#register
-  .section__content
-    %header
-      %h2 Register
 
-    %p Coming Soon...
+
+-#%section.section#register
+-#  .container
+-#    .page-header
+-#      %h2 Register
+-#
+-#    %p.text-muted Coming Soon...
 
 
 
 %section.section#sponsors
-  .section__content
-    %header
+  .container
+    .page-header
       %h2 Sponsors
 
-    %p
-      = link_to 'http://twitter.com/salesforceux' do
-        = image_tag 'sponsors/salesforce.svg', alt: 'Salesforce UX', width: 137, height: 96
+    %h3 Diamond Sponsor
 
-    %p= link_to 'Sponsor Clarity', 'sponsor'
+    %ul.row.list-unstyled
+      %li.col-xs-6.col-sm-4.col-md-3.col-lg-2
+        = link_to 'http://twitter.com/salesforceux' do
+          = image_tag 'sponsors/salesforce.svg', alt: 'Salesforce UX', class: 'img-responsive sponsors'
+
+    -#%h3 Platinum Sponsors
+
+    -#%h3 Silver Sponsors
+
+    -#%h3 Basic Sponsors
+
+    -#%h3 Diversity Sponsors
+
+    -#%h3 In-Kind Sponsors
+
+    %p.text-center= link_to 'Sponsor Clarity', 'sponsor', class: 'btn btn-default'

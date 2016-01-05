@@ -1,0 +1,177 @@
+---
+title: Sponsor Clarity
+layout: layout_1_column
+---
+
+<p class="lead">
+  Thank you for your consideration in sponsoring Clarity. This page is a guide
+  to all the sponsorship opportunities available for the event. If you have
+  different ideas for how we can partner together, please do not hesitate to
+  <a href="/contact">contact us</a>.
+</p>
+
+## About the Event
+
+Clarity is a 2-day, single-track style guide conference in San Francisco.
+Leaders and advocates from various topics relating to style guides, design
+systems, frameworks, branding, and documentation will share their unique
+perspectives and approaches.
+
+Attendees will vary from designers, developers, product managers, researchers,
+and copywriters from enterprise,
+<abbr title="Business-to-Business">B2B</abbr>, startups, non-profits, etc.
+
+Announced speakers so far:
+
+<% data.speakers.each do |speaker| %>
+* <%= speaker.name %>
+<% end %>
+
+## Sponsor Levels
+
+<div class="panel panel-default">
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Benefits</th>
+          <% data.sponsors.each do |level| %>
+            <th scope="col">
+              <% if level.tooltip? %>
+                <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="<%= level.tooltip %>">
+                  <%= level.name %>
+                </button>
+              <% else %>
+                <button type="button" class="btn btn-link" data-toggle="tooltip" data-placement="top" title="Sponsor at the <%= level.price %> level.">
+                  <%= level.name %>
+                </button>
+              <% end %>
+            </th>
+          <% end %>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th scope="row">Social media mentions</th>
+          <% data.sponsors.each do |level| %>
+            <td><%= level.social %></td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">Logo on website & brochure</th>
+          <% data.sponsors.each do |level| %>
+            <td>
+              <% if level.logo_brochure == true %>
+                &#10003;
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">Small brochures or swag in attendee bags</th>
+          <% data.sponsors.each do |level| %>
+            <td>
+              <% if level.swag_bag == true %>
+                &#10003;
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">Tickets to the event</th>
+          <% data.sponsors.each do |level| %>
+            <td><%= level.tickets %></td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">Discount for additional tickets</th>
+          <% data.sponsors.each do |level| %>
+            <td><%= level.discount %></td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">Logo on event signage</th>
+          <% data.sponsors.each do |level| %>
+            <td>
+              <% if level.logo_signage == true %>
+                &#10003;
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">Preferred logo placement</th>
+          <% data.sponsors.each do |level| %>
+            <td>
+              <% if level.logo_preferred == true %>
+                &#10003;
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">Logo on stage</th>
+          <% data.sponsors.each do |level| %>
+            <td>
+              <% if level.logo_stage == true %>
+                &#10003;
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+
+        <tr>
+          <th scope="row">5-minute speaking slot</th>
+          <% data.sponsors.each do |level| %>
+            <td>
+              <% if level.speaking == true %>
+                &#10003;
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+## What We Need
+
+You can use your sponsorship budget to any or a combination of the following:
+
+* Conference
+  * Venue
+  * Day 1 Snacks and Beverages
+  * Day 2 Snacks and Beverages
+  * Reliable Wifi
+  * Landyards
+  * Swag (stickers, shirts, buttons, etc.)
+  * Talk Recordings
+  * Sketch Note Artist fee
+
+* Events
+  * Speaker Dinner
+  * Opening Reception drinks
+  * Closing Party Venue
+  * Closing Party beverages
+
+* Speaker Amenities
+  * Honorariums
+  * Flights
+  * Lodging
+  * Public transportation tickets
+  * Gifts
+  * Childcare (1 speaker)
+
+If you would like to sponsor our event, please [contact us][].
+
+[contact us]: /contact

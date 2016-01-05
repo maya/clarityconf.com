@@ -1,49 +1,51 @@
-= wrap_layout :minimal do
-  .masthead
-    %header.banner(role="banner")
-      %p.site-title
-        - if current_page.data.title == 'home'
-          = link_to 'Clarity', '#about'
-        - else
-          = link_to 'Clarity', '/'
+= wrap_layout :scaffold do
+  .navbar.navbar-default.navbar-fixed-top
+    .container
+      %header.navbar-header(role="banner")
+        %p.initialism
+          - if current_page.data.page == 'home'
+            = link_to 'Clarity', '#top', class: 'navbar-brand'
+          - else
+            = link_to 'Clarity', '/', class: 'navbar-brand'
 
-      %p.site-toggle= link_to 'Menu', '#menu'
+        %p
+          %button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false')
+            Menu
 
-    %nav.navigation(role="navigation")
-      %ul.list--horizontal#menu
-        - if current_page.data.title == 'home'
-          %li= link_to 'About', '#about'
+      .collapse.navbar-collapse#bs-example-navbar-collapse-1
+        %ul.nav.navbar-nav.navbar-right
+          - if current_page.data.page == 'home'
+            - @link_prefix = '#'
 
-          %li= link_to 'Speakers', '#speakers'
+          - else
+            - @link_prefix = '/#'
 
-          %li= link_to 'Schedule', '#schedule'
+          %li= link_to 'About', "#{@link_prefix}about"
 
-          %li= link_to 'Location', '#location'
+          %li= link_to 'Speakers', "#{@link_prefix}speakers"
 
-          %li= link_to 'Register', '#register'
+          -#%li= link_to 'Schedule', "#{@link_prefix}schedule"
 
-          %li= link_to 'Sponsors', '#sponsors'
+          -#%li= link_to 'Location', "#{@link_prefix}location"
 
-        - else
-          %li= link_to 'About', '/#about'
+          -#%li= link_to 'Register', "#{@link_prefix}register"
 
-          %li= link_to 'Speakers', '/#speakers'
-
-          %li= link_to 'Schedule', '/#schedule'
-
-          %li= link_to 'Location', '/#location'
-
-          %li= link_to 'Register', '/#register'
-
-          %li= link_to 'Sponsors', '/#sponsors'
+          %li= link_to 'Sponsors', "#{@link_prefix}sponsors"
 
   .page= yield
 
-  %footer.contentinfo(role='contentinfo')
-    .copyright
-      :markdown
-        Copyright &copy; 2015&ndash;2016 [Clarity](/), all rights reserved.
+  %footer.navbar.navbar-default(role='contentinfo')
+    .container
+      %p.navbar-text
+        %small
+          Copyright &copy;
+          = copyright_years(2015)
+          = succeed ',' do
+            = link_to data.site.author, 'http://sushiandrobots.com', class: 'navbar-link'
+          all rights reserved.
 
-    %ul.legal
-      %li= link_to 'Sponsor', 'sponsor'
-      %li= link_to 'Code of Conduct', 'coc'
+
+      %ul.nav.navbar-nav.navbar-right
+        %li= link_to 'Contact',         '/contact'
+        %li= link_to 'Sponsor',         '/sponsor'
+        %li= link_to 'Code of Conduct', '/coc'

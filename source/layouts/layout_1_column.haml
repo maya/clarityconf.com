@@ -1,0 +1,8 @@
+= wrap_layout :layout do
+  %section.section
+    .container
+      %main.layout--1-column(role="main")
+        .page-header
+          %h1= current_page.data.title
+
+        = yield

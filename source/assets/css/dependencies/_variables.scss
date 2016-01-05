@@ -1,0 +1,46 @@
+$tiara:         #C9D1D3;
+$alabaster:     #F7F7F7;
+$morning-glory: #9DD3DF;
+$mine-shaft:    #3B3737;
+$tamarillo:     #991818;
+
+$silver:        $tiara;
+$white:         $alabaster;
+$aqua:          $morning-glory;
+$black:         $mine-shaft;
+$red:           $tamarillo;
+
+$true-white:    #fff;
+$true-black:    #000;
+
+$color-background:           $white;
+$color-background-shade:     mix(mix($silver, $white), $white);
+$color-background-highlight: $true-white;
+$color-background-hover:     mix($silver, $white);
+$color-background-primary:   $blue;
+$color-background-success:   $green;
+$color-background-info:      $aqua;
+$color-background-warning:   $orange;
+$color-background-danger:    $red;
+
+$color-text:            $black;
+$color-text-weak:       mix($color-text, $white);
+$color-text-strong:     mix($color-text, $true-black);
+$color-text-link:       $blue;
+$color-text-link-hover: darken($color-text-link, 25%);
+$color-text-inverse:    $white;
+
+$color-border:         $silver;
+$color-border-primary: $color-background-primary;
+$color-border-success: $color-background-success;
+$color-border-info:    $color-background-info;
+$color-border-warning: $color-background-warning;
+$color-border-danger:  $color-background-danger;
+
+$spacing-xx-small: 2px;
+$spacing-x-small:  4px;
+$spacing-small:    8px;
+$spacing-medium:   16px;
+$spacing-large:    32px;
+
+$height-footer: 50px;

@@ -1,0 +1,61 @@
+-
+  name:           In-Kind
+  tickets:
+  discount:
+  logo_brochure:  true
+  logo_signage:   false
+  logo_preferred: false
+  logo_stage:     false
+  social:         1
+  swag_bag:       true
+  speaking:       false
+  price:
+  tooltip:        Provide your goods or service instead of a monetary value.
+-
+  name:           Basic
+  tickets:        1
+  discount:       10%
+  logo_brochure:  true
+  logo_signage:   true
+  logo_preferred: false
+  logo_stage:     false
+  social:         2
+  swag_bag:       true
+  speaking:       false
+  price:          $2,500
+-
+  name:           Silver
+  tickets:        2
+  discount:       10%
+  logo_brochure:  true
+  logo_signage:   true
+  logo_preferred: false
+  logo_stage:     false
+  social:         3
+  swag_bag:       true
+  speaking:       false
+  price:          $5,000
+-
+  name:           Platinum
+  tickets:        5
+  discount:       20%
+  logo_brochure:  true
+  logo_signage:   true
+  logo_preferred: true
+  logo_stage:     false
+  social:         4
+  swag_bag:       true
+  speaking:       false
+  price:          $7,500
+-
+  name:           Diamond
+  tickets:        10
+  discount:       20%
+  logo_brochure:  true
+  logo_signage:   true
+  logo_preferred: true
+  logo_stage:     true
+  social:         5
+  swag_bag:       true
+  speaking:       true
+  price:          $10,000

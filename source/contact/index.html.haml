@@ -1,0 +1,44 @@
+---
+title: Contact Us
+layout: layout_1_column
+---
+
+- content_for :head_meta do
+  %meta(name='robots' content='noindex')
+
+= form_tag 'https://formkeep.com/f/80ff36bb801d', method: 'post', class: 'form-contact' do
+  = field_set_tag do
+    %input(type='hidden' name='utf8' value='✓')
+
+    %ol.list-unstyled
+      %li.form-group
+        = label_tag :name, class: 'control-label'
+
+        = text_field_tag :name, size: 20, class: 'form-control', required: true, placeholder: 'Your Name'
+
+      %li.form-group
+        = label_tag :email, class: 'control-label'
+
+        = email_field_tag :email, size: 20, class: 'form-control', required: true, placeholder: 'you@email.com'
+
+      %li.form-group
+        = label_tag :organization, class: 'control-label'
+
+        = text_field_tag :organization, size: 20, class: 'form-control', placeholder: 'Company, Inc.'
+
+      %li.form-group
+        = label_tag :website, class: 'control-label'
+
+        = url_field_tag :website, size: 20, class: 'form-control', placeholder: 'http://website.com'
+
+      %li.form-group
+        = label_tag :subject, class: 'control-label'
+
+        = select_tag :subject, :options => ['Just saying hello.', 'I would like to sponsor Clarity.', 'I would like to help out at Clarity.', 'I would like to report a violation of the Code of Conduct.'], class: 'form-control'
+
+      %li.form-group
+        = label_tag :message, class: 'control-label'
+
+        = text_area_tag :message, rows: 3, cols: 20, class: 'form-control', required: true, placeholder: 'Clarity is beautiful.'
+
+    .form-group= button_tag 'Send', class: 'btn btn-primary'

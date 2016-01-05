@@ -1,0 +1,470 @@
+@import 'dependencies/_index';
+$body-bg:    $color-background;
+$text-color: $color-text;
+
+$link-color:            $color-text-link;
+$link-hover-color:      $color-text-link-hover;
+$link-hover-decoration: none;
+
+$font-family-sans-serif: "Source Sans Pro", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:      "Source Serif Pro", Georgia, "Times New Roman", serif;
+$font-family-monospace:  "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace, monospace;
+$font-family-base:       $font-family-sans-serif;
+
+$font-size-base:  16px;
+$font-size-large: ceil(($font-size-base * 1.125));
+$font-size-small: ceil(($font-size-base * 0.875));
+
+$font-size-h1: floor(($font-size-base * 2.25 ));
+$font-size-h2: floor(($font-size-base * 2    ));
+$font-size-h3: ceil( ($font-size-base * 1.5  ));
+$font-size-h4: ceil( ($font-size-base * 1.125));
+$font-size-h5:        $font-size-base          ;
+$font-size-h6: ceil( ($font-size-base * 0.875));
+
+$line-height-base:     1.5;
+$line-height-computed: floor(($font-size-base * $line-height-base));
+
+$headings-font-family: $font-family-serif;
+$headings-font-weight: 400;
+$headings-line-height: 1.25;
+$headings-color:       inherit;
+
+$icon-font-path: "../../fonts/bootstrap/";
+
+$icon-font-name:   "glyphicons-halflings-regular";
+$icon-font-svg-id: "glyphicons_halflingsregular";
+
+$padding-base-vertical:   $spacing-small;
+$padding-base-horizontal: $spacing-medium;
+
+$padding-large-vertical:   $spacing-medium;
+$padding-large-horizontal: $spacing-large;
+
+$padding-small-vertical:   $spacing-x-small;
+$padding-small-horizontal: $spacing-small;
+
+$padding-xs-vertical:   $spacing-xx-small;
+$padding-xs-horizontal: $spacing-x-small;
+
+$line-height-large: 1.25;
+$line-height-small: 1.5;
+
+$border-radius-base:  0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
+$component-active-color: $color-text-inverse;
+$component-active-bg:    $color-background-primary;
+
+$table-cell-padding:           $spacing-medium;
+$table-condensed-cell-padding: $spacing-small;
+
+$table-bg:        transparent;
+$table-bg-accent: $table-bg;
+$table-bg-hover:  $color-background-hover;
+$table-bg-active: $table-bg-hover;
+
+$table-border-color: transparent;
+
+$btn-font-weight: 600;
+
+$btn-default-color:  $color-text-link;
+$btn-default-bg:     transparent;
+$btn-default-border: $color-border;
+
+$btn-primary-color:  $color-text-inverse;
+$btn-primary-bg:     $color-background-primary;
+$btn-primary-border: $color-border-primary;
+
+$btn-border-radius-base:  $border-radius-base;
+$btn-border-radius-large: $border-radius-large;
+$btn-border-radius-small: $border-radius-small;
+
+$input-bg: $color-background-highlight;
+
+$input-color:  $color-text;
+$input-border: $color-border;
+
+$input-border-radius:       $border-radius-base;
+$input-border-radius-large: $border-radius-large;
+$input-border-radius-small: $border-radius-small;
+
+$input-border-focus: $color-border-primary;
+
+$input-color-placeholder: $color-text-weak;
+
+$input-height-base:  ($line-height-computed + ($padding-base-vertical * 2) + 2);
+
+$form-group-margin-bottom: $spacing-medium;
+
+$input-group-addon-bg:           transparent;
+$input-group-addon-border-color: $input-border;
+
+$zindex-navbar:           1000;
+$zindex-dropdown:         1000;
+$zindex-popover:          1060;
+$zindex-tooltip:          1070;
+$zindex-navbar-fixed:     1030;
+$zindex-modal-background: 1040;
+$zindex-modal:            1050;
+
+$screen-xs:     480px;
+$screen-xs-min: $screen-xs;
+$screen-phone:  $screen-xs-min;
+
+$screen-sm:     768px;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+
+$screen-md:      1024px;
+$screen-md-min:  $screen-md;
+$screen-desktop: $screen-md-min;
+
+$screen-lg:         1360px;
+$screen-lg-min:     $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$grid-columns:              12;
+$grid-gutter-width:         $spacing-large;
+$grid-float-breakpoint:     $screen-sm-min;
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
+$container-tablet:  (720px + $grid-gutter-width);
+$container-sm:      $container-tablet;
+$container-desktop: (960px + $grid-gutter-width);
+$container-md:      $container-desktop;
+
+$container-large-desktop: (1280px + $grid-gutter-width);
+$container-lg:            $container-large-desktop;
+
+$navbar-height:              48px;
+$navbar-margin-bottom:       0;
+$navbar-border-radius:       $border-radius-base;
+$navbar-padding-horizontal:  floor(($grid-gutter-width / 2));
+$navbar-padding-vertical:    (($navbar-height - $line-height-computed) / 2);
+$navbar-collapse-max-height: 320px;
+
+$navbar-default-color:  $color-text;
+$navbar-default-bg:     $color-background-highlight;
+$navbar-default-border: $navbar-default-bg;
+
+$navbar-default-link-color:          $navbar-default-color;
+$navbar-default-link-hover-color:    $color-text-link;
+$navbar-default-link-hover-bg:       transparent;
+$navbar-default-link-active-color:   $color-text-strong;
+$navbar-default-link-active-bg:      $color-background;
+
+$navbar-default-brand-color:       $navbar-default-link-color;
+$navbar-default-brand-hover-color: $navbar-default-link-hover-color;
+$navbar-default-brand-hover-bg:    transparent;
+
+$navbar-default-toggle-hover-bg:     $navbar-default-brand-hover-bg;
+$navbar-default-toggle-icon-bar-bg:  $navbar-default-brand-color;
+$navbar-default-toggle-border-color: transparent;
+
+$nav-link-padding:  $spacing-medium;
+$nav-link-hover-bg: transparent;
+
+$nav-tabs-border-color: transparent;
+
+$nav-tabs-link-hover-border-color: transparent;
+
+$nav-tabs-active-link-hover-bg:           $color-background-highlight;
+$nav-tabs-active-link-hover-color:        $color-text;
+$nav-tabs-active-link-hover-border-color: $nav-tabs-border-color;
+
+$nav-tabs-justified-link-border-color:        $nav-tabs-border-color;
+$nav-tabs-justified-active-link-border-color: $nav-tabs-justified-link-border-color;
+
+
+$jumbotron-padding:           $spacing-large;
+$jumbotron-color:             inherit;
+$jumbotron-bg:                rgba(mix($color-background, $color-background-highlight), .5);
+$jumbotron-heading-color:     inherit;
+$jumbotron-font-size:         ceil(($font-size-base * 1.5));
+$jumbotron-heading-font-size: ceil(($font-size-base * 4.5));
+
+$state-success-text:   $color-text-inverse;
+$state-success-bg:     $color-background-success;
+$state-success-border: $color-border-success;
+
+$state-info-text:      $color-text-inverse;
+$state-info-bg:        $color-background-info;
+$state-info-border:    $color-border-info;
+
+$state-warning-text:   $color-text-inverse;
+$state-warning-bg:     $color-background-warning;
+$state-warning-border: $color-border-warning;
+
+$state-danger-text:    $color-text-inverse;
+$state-danger-bg:      $color-background-danger;
+$state-danger-border:  $color-border-danger;
+
+$alert-padding:          $spacing-medium;
+$alert-border-radius:    $border-radius-base;
+$alert-link-font-weight: 600;
+
+$alert-success-bg:     $state-success-bg;
+$alert-success-text:   $state-success-text;
+$alert-success-border: $state-success-border;
+
+$alert-info-bg:     $state-info-bg;
+$alert-info-text:   $state-info-text;
+$alert-info-border: $state-info-border;
+
+$alert-warning-bg:     $state-warning-bg;
+$alert-warning-text:   $state-warning-text;
+$alert-warning-border: $state-warning-border;
+
+$alert-danger-bg:     $state-danger-bg;
+$alert-danger-text:   $state-danger-text;
+$alert-danger-border: $state-danger-border;
+
+$list-group-bg:            $color-background-highlight;
+$list-group-border:        transparent;
+$list-group-border-radius: $border-radius-base;
+
+$list-group-link-color:         $color-text-link;
+$list-group-link-hover-color:   $list-group-link-color;
+$list-group-link-heading-color: inherit;
+
+$panel-bg:              $color-background-highlight;
+$panel-body-padding:    $spacing-medium;
+$panel-heading-padding: $spacing-medium;
+$panel-footer-padding:  $panel-heading-padding;
+$panel-border-radius:   $border-radius-base;
+
+$panel-inner-border: transparent;
+$panel-footer-bg:    transparent;
+
+$panel-default-text:       inherit;
+$panel-default-border:     transparent;
+$panel-default-heading-bg: transparent;
+
+$thumbnail-padding:       $spacing-x-small;
+$thumbnail-bg:            transparent;
+$thumbnail-border:        transparent;
+$thumbnail-border-radius: $border-radius-base;
+
+$thumbnail-caption-color:   inherit;
+$thumbnail-caption-padding: $spacing-medium;
+
+$close-font-weight:           600;
+$close-color:                 $black;
+$close-text-shadow:           0 1px 0 $white;
+
+$code-color: $color-text-strong;
+$code-bg:    mix($color-background, $color-background-highlight);
+
+$pre-bg:                    $code-bg;
+$pre-color:                 $code-color;
+$pre-border-color:          transparent;
+$pre-scrollable-max-height: 320px;
+
+$component-offset-horizontal: 192px;
+$text-muted:                  $gray-light;
+$abbr-border-color:           $color-border;
+$headings-small-color:        $color-text-weak;
+$blockquote-small-color:      $color-text-weak;
+$blockquote-font-size:        ($font-size-base * 1.25);
+$blockquote-border-color:     transparent;
+$page-header-border-color:    $color-border;
+$dl-horizontal-offset:        $component-offset-horizontal;
+$dl-horizontal-breakpoint:    $grid-float-breakpoint;
+$hr-border:                   $color-border;
+
+/*!
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import
+  // Core CSS
+  'bootstrap/scaffolding',
+  'bootstrap/type',
+  'bootstrap/code',
+  'bootstrap/grid',
+  'bootstrap/tables',
+  'bootstrap/forms',
+  'bootstrap/buttons',
+
+  // Components
+  'bootstrap/component-animations',
+  'bootstrap/dropdowns',
+  'bootstrap/button-groups',
+  'bootstrap/input-groups',
+  'bootstrap/navs',
+  'bootstrap/navbar',
+  'bootstrap/breadcrumbs',
+  'bootstrap/pagination',
+  'bootstrap/pager',
+  'bootstrap/labels',
+  'bootstrap/badges',
+  'bootstrap/jumbotron',
+  'bootstrap/thumbnails',
+  'bootstrap/alerts',
+  'bootstrap/progress-bars',
+  'bootstrap/media',
+  'bootstrap/list-group',
+  'bootstrap/panels',
+  'bootstrap/responsive-embed',
+  'bootstrap/wells',
+  'bootstrap/close',
+
+  // Components w/ JavaScript
+  'bootstrap/modals',
+  'bootstrap/tooltip',
+  'bootstrap/popovers',
+  'bootstrap/carousel',
+
+  // Utility classes
+  'bootstrap/utilities',
+  'bootstrap/responsive-utilities',
+
+  'bootstrap/glyphicons',
+  'bootstrap/print';
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: {
+    image: radial-gradient(circle at 100% 150%, $color-background-highlight 24%,$color-background 25%,$color-background 28%,$color-background-highlight 29%,$color-background-highlight 36%,$color-background 36%,$color-background 40%,rgba(0,0,0,0) 40%,rgba(0,0,0,0)),radial-gradient(circle at 0 150%, $color-background-highlight 24%,$color-background 25%,$color-background 28%,$color-background-highlight 29%,$color-background-highlight 36%,$color-background 36%,$color-background 40%,rgba(0,0,0,0) 40%,rgba(0,0,0,0)),radial-gradient(circle at 50% 100%, $color-background 10%,$color-background-highlight 11%,$color-background-highlight 23%,$color-background 24%,$color-background 30%,$color-background-highlight 31%,$color-background-highlight 43%,$color-background 44%,$color-background 50%,$color-background-highlight 51%,$color-background-highlight 63%,$color-background 64%,$color-background 71%,rgba(0,0,0,0) 71%,rgba(0,0,0,0)),radial-gradient(circle at 100% 50%, $color-background 5%,$color-background-highlight 6%,$color-background-highlight 15%,$color-background 16%,$color-background 20%,$color-background-highlight 21%,$color-background-highlight 30%,$color-background 31%,$color-background 35%,$color-background-highlight 36%,$color-background-highlight 45%,$color-background 46%,$color-background 49%,rgba(0,0,0,0) 50%,rgba(0,0,0,0)),radial-gradient(circle at 0 50%, $color-background 5%,$color-background-highlight 6%,$color-background-highlight 15%,$color-background 16%,$color-background 20%,$color-background-highlight 21%,$color-background-highlight 30%,$color-background 31%,$color-background 35%,$color-background-highlight 36%,$color-background-highlight 45%,$color-background 46%,$color-background 49%,rgba(0,0,0,0) 50%,rgba(0,0,0,0));
+    size: 96px 48px;
+    attachment: fixed;
+  }
+}
+
+.caps { @extend .initialism; }
+.initialism { letter-spacing: 1px; }
+
+.navbar {
+  box-shadow: 0 1px 1px rgba($black, .125);
+
+  button {
+    margin-right: 0;
+    padding: {
+      right: $spacing-medium;
+      left:  $spacing-medium;
+    }
+    line-height: 1;
+  }
+}
+
+header.navbar p { margin: 0; }
+
+.page {
+  flex: 1;
+  background-color: rgba(mix($color-background, $color-background-highlight), .25);
+
+  .container {
+    padding: {
+      top:    $spacing-large;
+      bottom: $spacing-large * 2;
+    }
+
+    &:first-child { padding-top: $navbar-height + $spacing-large; }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol { margin-bottom: 24px; }
+
+  h2 { margin-top: 48px; }
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh);
+
+  &:last-child { min-height: calc(100vh - #{$height-footer}); }
+
+  &:nth-child(odd) { background-color: rgba(mix($color-background, $color-background-highlight), .5); }
+}
+
+.layout--1-column {
+  margin: 0 auto;
+  max-width: 896px;
+}
+
+.page-header {
+  margin-bottom: 48px;
+  padding-bottom: 0;
+}
+
+.jumbotron { margin-bottom: 0; }
+
+.lead { line-height: inherit; }
+
+.panel {
+  margin: {
+    right: -$spacing-medium;
+    left:  -$spacing-medium;
+  }
+}
+
+.media { margin-bottom: 48px; }
+
+@media (max-width: $screen-xs-max) {
+  .media-left,
+  .media-body { display: block; }
+
+  .media-object {
+    margin: {
+      right: auto;
+      left:  auto;
+    }
+  }
+
+  .media-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .media-body { width: auto; }
+
+  .media-heading { margin-top: 24px; }
+}
+
+.avatar {
+  width:  192px;
+  height: 192px;
+
+  @media (min-width: $screen-lg-min) {
+    width:  96px;
+    height: 96px;
+  }
+}
+
+.sponsors {
+  display: block;
+  margin: 0 auto 24px;
+  width: 100%;
+  max-width: 192px;
+}
+
+footer.navbar .navbar-text { margin-left: 0; }
+
+.media-left { padding-right: $spacing-medium; }
+
+.btn-link { padding: 0; }

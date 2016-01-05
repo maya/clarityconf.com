@@ -1,0 +1,28 @@
+- content_for :foot_js do
+  = javascript_include_tag  '//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'
+
+  :javascript
+    (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);
+
+#mc_embed_signup
+  = form_tag '//clarityconf.us2.list-manage.com/subscribe/post?u=ffc4c32536aeadc48a87ebe84&amp;id=7c06e6d19d', method: 'post', class: 'validate', id: 'mc-embedded-subscribe-form', name: 'mc-embedded-subscribe-form', target: '_blank', novalidate: true do
+    .mc_embed_signup_scroll
+      .mc-field-group.form-group
+        = label_tag :email, for: 'mce-EMAIL', class: 'sr-only'
+
+        .row
+          .col-xs-12.col-sm-10.col-md-8.col-lg-6
+            = email_field_tag 'EMAIL', size: 20, class: 'form-control required email', id: 'mce-EMAIL', required: true, placeholder: 'you@email.com'
+
+        #mce-responses.clear
+          .response#mce-error-response.alert.alert-danger(style='display:none')
+
+          .response#mce-success-response.alert.alert-success(style='display:none')
+
+        %div(style='position: absolute; left: -5000px;' aria-hidden='true')
+          = text_field_tag :b_ffc4c32536aeadc48a87ebe84_7c06e6d19d, tabindex: '-1'
+
+      .form-group
+        = button_tag 'Subscribe', name: 'subscribe', id: 'mc-embedded-subscribe', class: 'button btn btn-primary'
+
+

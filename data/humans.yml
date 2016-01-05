@@ -1,0 +1,59 @@
+team:
+  -
+    name:    Jina
+    role:    Founder, Designer
+    twitter: jina
+
+thanks:
+  -
+    name: Christopher Auyeung
+  -
+    name: Michael Yuan
+  -
+    name: Josh Silverman
+  -
+    name: Craig Villamor
+
+markup:
+  -
+    name: ERB
+  -
+    name: HTML5
+  -
+    name: Haml
+  -
+    name: Markdown
+  -
+    name: Typogruby
+
+style:
+  -
+    name: CSS3
+  -
+    name: Sass
+  -
+    name: Normalize
+  -
+    name: Autoprefixer
+
+behavior:
+  -
+    name: Modernizr
+  -
+    name: jQuery
+  -
+    name: jQuery Balance Text
+  -
+    name: jQuery Validate
+  -
+    name: Responsive Design Testing
+
+misc:
+  -
+    name: Middleman
+  -
+    name: HTML5 Boilerplate
+  -
+    name: GitHub
+  -
+    name: Sublime Text

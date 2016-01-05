@@ -1,0 +1,55 @@
+!!!5
+%html.no-js(lang='en'){class: page_classes}
+  %head
+    %meta(charset='utf-8')
+    %meta(http-equiv='x-ua-compatible' content='ie=edge')
+
+    %title= page_title
+    %meta(name='description' content='#{current_page.data.description || data.site.description}')
+    %meta(name='viewport' content='width=device-width, initial-scale=1')
+    %meta(name='twitter:card' content='summary')
+    %meta(name='twitter:site' content='#{data.site.twitter_site}')
+    %meta(name='twitter:url' property='og:url' rel='canonical' content='#{data.site.url}#{current_page.url}')
+    %meta(name='msapplication-starturl' content='#{data.site.url}')
+    %meta(name='apple-mobile-web-app-title' content='#{page_title}')
+    %meta(name='twitter:title' property='og:title' content='#{page_title}')
+    %meta(name='twitter:description' property='og:description' content='#{current_page.data.description || data.site.description}')
+    %meta(name='twitter:image' property='og:image' content='#{current_page.data.image || data.site.image}')
+    %meta(name='author' content='#{data.site.author}')
+    = yield_content :head_meta
+
+    %link(rel='apple-touch-icon' href='apple-touch-icon.png')
+    %link(rel='author' href='/humans.txt')
+    %link(rel='sitemap' type='application/xml' title='Sitemap' href='/sitemap.xml')
+    = yield_content :head_link
+
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900|Source+Sans+Pro:400,200,300,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Source+Serif+Pro:400,600,700'
+    = stylesheet_link_tag 'styles'
+    = yield_content :head_css
+
+    = javascript_include_tag  'vendor/modernizr-3.2.0-custom'
+    = yield_content :head_js
+
+  %body(data-spy='scroll' data-target='.navbar')
+    /[if lt IE 8]
+      %p.browserupgrade
+        You are using an
+        %strong outdated
+        browser. Please
+        = link_to 'upgrade your browser', 'http://browsehappy.com/'
+        to improve your experience.
+
+    = Typogruby.improve(yield)
+
+    = javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'
+    :javascript
+      window.jQuery || document.write('<script src="/assets/js/vendor/jquery-2.1.4.js"><\/script>')
+    = javascript_include_tag 'scripts'
+    = yield_content :foot_js
+    :javascript
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','#{data.site.googleanalytics}','auto');ga('send','pageview');
