@@ -29,7 +29,7 @@ title_reverse: true
 
     .row
       - for speaker in data.speakers
-        .col-sm-12.col-lg-6
+        .col-sm-12.col-lg-6.speaker
           .media{id: speaker.id}
             .media-left
               = link_to speaker.url do

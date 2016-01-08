@@ -468,3 +468,5 @@ footer.navbar .navbar-text { margin-left: 0; }
 .media-left { padding-right: $spacing-medium; }
 
 .btn-link { padding: 0; }
+
+.speaker:nth-child(odd) { clear: both; }
