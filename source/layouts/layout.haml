@@ -49,3 +49,7 @@
         %li= link_to 'Contact',         '/contact'
         %li= link_to 'Sponsor',         '/sponsor'
         %li= link_to 'Code of Conduct', '/coc'
+        %li
+          = link_to 'Follow @clarity_conf', 'https://twitter.com/clarity_conf', class: 'twitter-follow-button', data: {show: {count: 'false'}, size: 'large', dnt: 'true'}
+          :javascript
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
