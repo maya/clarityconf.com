@@ -17,7 +17,7 @@ $color-background:           $white;
 $color-background-shade:     mix(mix($silver, $white), $white);
 $color-background-highlight: $true-white;
 $color-background-hover:     mix($silver, $white);
-$color-background-primary:   $blue;
+$color-background-primary:   mix(mix($blue, #99CCCC), $navy);
 $color-background-success:   $green;
 $color-background-info:      $aqua;
 $color-background-warning:   $orange;
@@ -26,7 +26,7 @@ $color-background-danger:    $red;
 $color-text:            $black;
 $color-text-weak:       mix($color-text, $white);
 $color-text-strong:     mix($color-text, $true-black);
-$color-text-link:       $blue;
+$color-text-link:       $color-background-primary;
 $color-text-link-hover: darken($color-text-link, 25%);
 $color-text-inverse:    $white;
 

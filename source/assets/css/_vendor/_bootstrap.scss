@@ -184,7 +184,7 @@ $nav-tabs-justified-active-link-border-color: $nav-tabs-justified-link-border-co
 
 $jumbotron-padding:           $spacing-large;
 $jumbotron-color:             inherit;
-$jumbotron-bg:                rgba(mix($color-background, $color-background-highlight), .5);
+$jumbotron-bg:                transparent;
 $jumbotron-heading-color:     inherit;
 $jumbotron-font-size:         ceil(($font-size-base * 1.5));
 $jumbotron-heading-font-size: ceil(($font-size-base * 4.5));
@@ -288,7 +288,7 @@ $hr-border:                   $color-border;
   // Core CSS
   'bootstrap/scaffolding',
   'bootstrap/type',
-  'bootstrap/code',
+  //'bootstrap/code',
   'bootstrap/grid',
   'bootstrap/tables',
   'bootstrap/forms',
@@ -296,38 +296,38 @@ $hr-border:                   $color-border;
 
   // Components
   'bootstrap/component-animations',
-  'bootstrap/dropdowns',
-  'bootstrap/button-groups',
-  'bootstrap/input-groups',
+  //'bootstrap/dropdowns',
+  //'bootstrap/button-groups',
+  //'bootstrap/input-groups',
   'bootstrap/navs',
   'bootstrap/navbar',
-  'bootstrap/breadcrumbs',
-  'bootstrap/pagination',
-  'bootstrap/pager',
-  'bootstrap/labels',
-  'bootstrap/badges',
+  //'bootstrap/breadcrumbs',
+  //'bootstrap/pagination',
+  //'bootstrap/pager',
+  //'bootstrap/labels',
+  //'bootstrap/badges',
   'bootstrap/jumbotron',
   'bootstrap/thumbnails',
-  'bootstrap/alerts',
-  'bootstrap/progress-bars',
+  //'bootstrap/alerts',
+  //'bootstrap/progress-bars',
   'bootstrap/media',
   'bootstrap/list-group',
-  'bootstrap/panels',
-  'bootstrap/responsive-embed',
-  'bootstrap/wells',
-  'bootstrap/close',
+  //'bootstrap/panels',
+  //'bootstrap/responsive-embed',
+  //'bootstrap/wells',
+  //'bootstrap/close',
 
   // Components w/ JavaScript
-  'bootstrap/modals',
+  //'bootstrap/modals',
   'bootstrap/tooltip',
-  'bootstrap/popovers',
-  'bootstrap/carousel',
+  //'bootstrap/popovers',
+  //'bootstrap/carousel',
 
   // Utility classes
   'bootstrap/utilities',
   'bootstrap/responsive-utilities',
 
-  'bootstrap/glyphicons',
+  //'bootstrap/glyphicons',
   'bootstrap/print';
 
 html {
@@ -341,8 +341,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: {
-    image: radial-gradient(circle at 100% 150%, $color-background-highlight 24%,$color-background 25%,$color-background 28%,$color-background-highlight 29%,$color-background-highlight 36%,$color-background 36%,$color-background 40%,rgba(0,0,0,0) 40%,rgba(0,0,0,0)),radial-gradient(circle at 0 150%, $color-background-highlight 24%,$color-background 25%,$color-background 28%,$color-background-highlight 29%,$color-background-highlight 36%,$color-background 36%,$color-background 40%,rgba(0,0,0,0) 40%,rgba(0,0,0,0)),radial-gradient(circle at 50% 100%, $color-background 10%,$color-background-highlight 11%,$color-background-highlight 23%,$color-background 24%,$color-background 30%,$color-background-highlight 31%,$color-background-highlight 43%,$color-background 44%,$color-background 50%,$color-background-highlight 51%,$color-background-highlight 63%,$color-background 64%,$color-background 71%,rgba(0,0,0,0) 71%,rgba(0,0,0,0)),radial-gradient(circle at 100% 50%, $color-background 5%,$color-background-highlight 6%,$color-background-highlight 15%,$color-background 16%,$color-background 20%,$color-background-highlight 21%,$color-background-highlight 30%,$color-background 31%,$color-background 35%,$color-background-highlight 36%,$color-background-highlight 45%,$color-background 46%,$color-background 49%,rgba(0,0,0,0) 50%,rgba(0,0,0,0)),radial-gradient(circle at 0 50%, $color-background 5%,$color-background-highlight 6%,$color-background-highlight 15%,$color-background 16%,$color-background 20%,$color-background-highlight 21%,$color-background-highlight 30%,$color-background 31%,$color-background 35%,$color-background-highlight 36%,$color-background-highlight 45%,$color-background 46%,$color-background 49%,rgba(0,0,0,0) 50%,rgba(0,0,0,0));
-    size: 96px 48px;
+    image: image-url('brand/bg.svg');
+    size: cover;
     attachment: fixed;
   }
 }
@@ -367,13 +367,14 @@ header.navbar p { margin: 0; }
 
 .page {
   flex: 1;
-  background-color: rgba(mix($color-background, $color-background-highlight), .25);
+  background-color: rgba(mix($color-background, $color-background-highlight), .75);
 
   .container {
     padding: {
       top:    $spacing-large;
       bottom: $spacing-large * 2;
     }
+    background: rgba(mix($color-background, $color-background-highlight), .75);
 
     &:first-child { padding-top: $navbar-height + $spacing-large; }
   }
@@ -398,8 +399,6 @@ header.navbar p { margin: 0; }
   min-height: calc(100vh);
 
   &:last-child { min-height: calc(100vh - #{$height-footer}); }
-
-  &:nth-child(odd) { background-color: rgba(mix($color-background, $color-background-highlight), .5); }
 }
 
 .layout--1-column {
