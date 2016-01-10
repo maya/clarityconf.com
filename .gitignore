@@ -1,8 +1,9 @@
 /build
 /.bundle
 /.cache
+*.css.map
 .DS_Store
 Gemfile.lock
 /.rvmrc
 /.sass-cache
-/vendor
+/vendor/bundle/
