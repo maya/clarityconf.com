@@ -1,4 +1,4 @@
-Chris is a web designer and developer. He writes about all thing web at 
+Chris is a web designer and developer. He writes about all things web at 
 [CSS-Tricks][tricks], talks about all things web at conferences around the 
 world and on his podcast [ShopTalk][pod], and co-founded the web coding 
 playground [CodePen][pen].
