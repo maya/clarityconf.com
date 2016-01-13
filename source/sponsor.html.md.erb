@@ -24,7 +24,9 @@ and copywriters from enterprise,
 Announced speakers so far:
 
 <% data.speakers.each do |speaker| %>
+<% if speaker.announced == 'true' %>
 * <%= speaker.name %>
+<% end %>
 <% end %>
 
 ## Sponsor Levels

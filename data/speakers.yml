@@ -11,6 +11,12 @@
   title:     Web Designer
   announced: true
 -
+  name:      Chris Coyier
+  id:        chris-coyier
+  url:       http://chriscoyier.net/
+  title:     Web Designer
+  announced: true
+-
   name:      Claudina Sarahe
   id:        claudina-sarahe
   url:       http://itsmisscs.me/
@@ -46,3 +52,9 @@
   url:       http://rachelnabors.com/
   title:     Animation Engineer
   announced: true
+-
+  name:      Susan Lin
+  id:        susan-lin
+  url:       http://bysusanlin.com/
+  title:     Product Designer, Sketchbook Destroyer
+  announced: false

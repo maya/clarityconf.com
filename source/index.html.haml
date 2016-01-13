@@ -30,22 +30,62 @@ title_reverse: true
       %h2 Speakers
 
     .row
+      .col-sm-12.col-lg-6.speaker
+        %h3 Our Emcee
+
+        - for speaker in data.speakers
+          - if speaker.id == 'chris-coyier'
+            .media{id: speaker.id}
+              .media-left
+                = link_to speaker.url do
+                  = image_tag 'speakers/' + speaker.id + '.png', alt: speaker.name, class: 'img-circle avatar media-object'
+
+              .media-body
+                %h3.media-heading
+                  = link_to speaker.name, speaker.url
+                  %br
+                  %small= speaker.title
+
+                = partial 'bios/' + speaker.id
+
+      .col-sm-12.col-lg-6.speaker
+        %h3 Our Sketch Note Artist
+
+        - for speaker in data.speakers
+          - if speaker.id == 'susan-lin'
+            .media{id: speaker.id}
+              .media-left
+                = link_to speaker.url do
+                  = image_tag 'speakers/' + speaker.id + '.png', alt: speaker.name, class: 'img-circle avatar media-object'
+
+              .media-body
+                %h3.media-heading
+                  = link_to speaker.name, speaker.url
+                  %br
+                  %small= speaker.title
+
+                = partial 'bios/' + speaker.id
+
+    %h3 Our Speakers
+
+    .row
       - for speaker in data.speakers
-        .col-sm-12.col-lg-6.speaker
-          .media{id: speaker.id}
-            .media-left
-              = link_to speaker.url do
-                = image_tag 'speakers/' + speaker.id + '.png', alt: speaker.name, class: 'img-circle avatar media-object'
+        - if speaker.id != 'chris-coyier' && speaker.id != 'susan-lin'
+          .col-sm-12.col-lg-6.speaker
+            .media{id: speaker.id}
+              .media-left
+                = link_to speaker.url do
+                  = image_tag 'speakers/' + speaker.id + '.png', alt: speaker.name, class: 'img-circle avatar media-object'
 
-            .media-body
-              %h3.media-heading
-                = link_to speaker.name, speaker.url
-                %br
-                %small= speaker.title
+              .media-body
+                %h3.media-heading
+                  = link_to speaker.name, speaker.url
+                  %br
+                  %small= speaker.title
 
-              = partial 'bios/' + speaker.id
+                = partial 'bios/' + speaker.id
 
-    %p.text-muted.text-center More announced soon...
+    %p.text-muted.text-center More announced very soon!
 
 
 
