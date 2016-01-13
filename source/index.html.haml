@@ -8,6 +8,8 @@ title_reverse: true
   .container
     %h1 A Style Guide Conference
 
+    %p= link_to 'Register Now', '#register', class: 'btn btn-primary'
+
     %p.lead
       San Francisco, California
       %br
@@ -42,6 +44,8 @@ title_reverse: true
                 %small= speaker.title
 
               = partial 'bios/' + speaker.id
+
+    %p.text-muted.text-center More announced soon...
 
 
 
@@ -120,12 +124,21 @@ title_reverse: true
 
 
 
--#%section.section#register
--#  .container
--#    .page-header
--#      %h2 Register
--#
--#    %p.text-muted Coming Soon...
+%section.section#register
+  .container
+    .page-header
+      %h2 Register
+
+    %p
+      %strong
+        If you are (or plan to) sponsor,
+        = link_to 'contact us', '/contact'
+        to receive your ticket(s) as defined within your
+        = succeed '.' do
+          = link_to 'sponsorship level', '/sponsor'
+
+    .embed-responsive.embed-responsive-16by9
+      %iframe.embed-responsive-item(src="//eventbrite.com/tickets-external?eid=19886717708&ref=etckt" scrolling="auto" allowtransparency="true")
 
 
 
@@ -134,7 +147,7 @@ title_reverse: true
     .page-header
       %h2 Sponsors
 
-    -#%h3 Diamond Sponsor
+    %h3 Diamond Sponsors
 
     %ul.row.list-unstyled
       %li.col-xs-6.col-sm-4.col-md-3.col-lg-2

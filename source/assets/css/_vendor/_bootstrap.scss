@@ -367,7 +367,7 @@ header.navbar p { margin: 0; }
 
 .page {
   flex: 1;
-  background-color: rgba(mix($color-background, $color-background-highlight), .75);
+  background-color: rgba(mix($color-background, $color-background-highlight), .875);
 
   .container {
     padding: {
@@ -375,7 +375,6 @@ header.navbar p { margin: 0; }
       bottom: $spacing-large * 2;
     }
     min-width: 288px;
-    background: rgba(mix($color-background, $color-background-highlight), .75);
 
     &:first-child { padding-top: $navbar-height + $spacing-large; }
   }
@@ -470,8 +469,6 @@ footer.navbar .navbar-text { margin-left: 0; }
 .btn-link { padding: 0; }
 
 .speaker:nth-child(odd) { clear: both; }
-
-.twitter-follow-button { margin: 10px 0 10px $spacing-medium; }
 
 .embed-location,
 .logo-location { margin-bottom: 24px; }
