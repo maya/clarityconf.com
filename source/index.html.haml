@@ -95,14 +95,28 @@ title_reverse: true
 
 
 
--#%section.section#location
--#  .container
--#    .page-header
--#      %h2 Location
--#
--#    %p San Francisco, California
--#
--#    %p.text-muted Venue to be announced...
+%section.section#location
+  .container
+    .page-header
+      %h2 Location
+
+    .row
+      .col-xs-12.col-sm-8.embed-location
+        .embed-responsive.embed-responsive-16by9
+          %iframe.embed-responsive-item(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12617.770603919924!2d-122.4191225!3d37.7562178!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3499ccead022e57!2sAlamo+Drafthouse+Cinema!5e0!3m2!1sen!2sus!4v1452667227529" allowfullscreen)
+
+      .col-xs-12.col-sm-4
+        %figure
+          = image_tag 'alamodrafthouse.png', alt: '', class: 'img-responsive logo-location'
+
+          %figcaption.text-center
+            %strong Alamo Drafthouse
+            %br
+            2550 Mission Street
+            %br
+            San Francisco, California 94110
+            %br
+            415-549-5959
 
 
 

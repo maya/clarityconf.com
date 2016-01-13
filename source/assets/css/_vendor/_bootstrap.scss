@@ -313,7 +313,7 @@ $hr-border:                   $color-border;
   'bootstrap/media',
   'bootstrap/list-group',
   //'bootstrap/panels',
-  //'bootstrap/responsive-embed',
+  'bootstrap/responsive-embed',
   //'bootstrap/wells',
   //'bootstrap/close',
 
@@ -374,6 +374,7 @@ header.navbar p { margin: 0; }
       top:    $spacing-large;
       bottom: $spacing-large * 2;
     }
+    min-width: 288px;
     background: rgba(mix($color-background, $color-background-highlight), .75);
 
     &:first-child { padding-top: $navbar-height + $spacing-large; }
@@ -471,3 +472,14 @@ footer.navbar .navbar-text { margin-left: 0; }
 .speaker:nth-child(odd) { clear: both; }
 
 .twitter-follow-button { margin: 10px 0 10px $spacing-medium; }
+
+.embed-location,
+.logo-location { margin-bottom: 24px; }
+
+.logo-location {
+  margin: {
+    right: auto;
+    left:  auto;
+  }
+  max-width: 218px;
+}
