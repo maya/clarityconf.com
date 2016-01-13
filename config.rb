@@ -23,7 +23,7 @@ end
 activate :directory_indexes
 activate :livereload
 activate :syntax
-activate :title, site: data.site.title, separator: ' &bull; '
+activate :title, site: data.site.title, separator: ' • '
 
 set :css_dir,   'assets/css'
 set :fonts_dir, 'assets/fonts'

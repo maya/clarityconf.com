@@ -9,6 +9,11 @@
   url:       http://bradfrost.com/
   title:     Web Designer
 -
+  name:      Brandon Ferrua
+  id:        brandon-ferrua
+  url:       https://twitter.com/bferrua
+  title:     Senior Developer, Design Systems, Salesforce
+-
   name:      Chris Coyier
   id:        chris-coyier
   url:       http://chriscoyier.net/
@@ -43,6 +48,11 @@
   id:        rachel-nabors
   url:       http://rachelnabors.com/
   title:     Animation Engineer
+-
+  name:      Stephanie Rewis
+  id:        stephanie-rewis
+  url:       http://blog.w3conversions.com/
+  title:     Lead Developer, Design Systems, Salesforce
 -
   name:      Susan Lin
   id:        susan-lin
