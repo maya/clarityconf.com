@@ -3,58 +3,48 @@
   id:        anna-pickard
   url:       http://annapickard.com/
   title:     Editorial Director, Slack
-  announced: true
 -
   name:      Brad Frost
   id:        brad-frost
   url:       http://bradfrost.com/
   title:     Web Designer
-  announced: true
 -
   name:      Chris Coyier
   id:        chris-coyier
   url:       http://chriscoyier.net/
   title:     Web Designer
-  announced: true
 -
   name:      Claudina Sarahe
   id:        claudina-sarahe
   url:       http://itsmisscs.me/
   title:     Front-End Architect and Systems Designer
-  announced: true
 -
   name:      Cordelia McGee-Tubb
   id:        cordelia-mcgee-tubb
   url:       http://cordeliadillon.com/
   title:     Accessibility Engineer, Dropbox
-  announced: true
 -
   name:      Maya Benari
   id:        maya-benari
   url:       http://maya-benari.com/
   title:     Front-End Designer, 18F
-  announced: true
 -
   name:      Miriam Suzanne
   id:        miriam-suzanne
   url:       http://miriamsuzanne.com/
   title:     Designer & Developer
-  announced: true
 -
   name:      Nathan Curtis
   id:        nathan-curtis
   url:       http://eightshapes.com/nathan-curtis.html
   title:     Founder & Designer, Eightshapes
-  announced: true
 -
   name:      Rachel Nabors
   id:        rachel-nabors
   url:       http://rachelnabors.com/
   title:     Animation Engineer
-  announced: true
 -
   name:      Susan Lin
   id:        susan-lin
   url:       http://bysusanlin.com/
   title:     Product Designer, Sketchbook Destroyer
-  announced: false
