@@ -139,28 +139,46 @@ title_reverse: true
 
 
 
-%section.section#location
+%section.section#locations
   .container
     .page-header
-      %h2 Location
+      %h2 Locations
 
     .row
-      .col-xs-12.col-sm-8.embed-location
-        .embed-responsive.embed-responsive-16by9
-          %iframe.embed-responsive-item(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12617.770603919924!2d-122.4191225!3d37.7562178!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd3499ccead022e57!2sAlamo+Drafthouse+Cinema!5e0!3m2!1sen!2sus!4v1452667227529" allowfullscreen)
+      .col-xs-12.col-sm-6
+        %h3 The Awesome Conference Venue
 
-      .col-xs-12.col-sm-4
-        %figure
-          = image_tag 'alamodrafthouse.png', alt: '', class: 'img-responsive logo-location'
+        %p
+          %strong Alamo Drafthouse
+          %br
+          2550 Mission Street
+          %br
+          San Francisco, California 94110
+          %br
+          = link_to 'Google Map', 'https://goo.gl/maps/f93dUKY4EzQ2'
 
-          %figcaption.text-center
-            %strong Alamo Drafthouse
-            %br
-            2550 Mission Street
-            %br
-            San Francisco, California 94110
-            %br
-            415-549-5959
+        %p
+          In typical Alamo Drafthouse style, food and drinks can be had at
+          your seat! The staff will take orders and deliver food and beverages
+          between talks.
+
+      .col-xs-12.col-sm-6
+        %h3 Thursday Happy Hour
+
+        %p
+          %strong Eventbrite
+          %br
+          155 5th St. 7th Floor
+          %br
+          San Francisco, California 94103
+          %br
+          = link_to 'Google Map', 'https://goo.gl/maps/gfb4DqM9tDM2'
+
+        %p
+          Join us for food, drinks, and mingling Thursday night at 6&ndash;9pm
+          to cap off a great first day!
+          %strong Thank you Eventbrite for sponsoring!
+          RSVP will be required (form coming soon).
 
 
 
@@ -196,7 +214,12 @@ title_reverse: true
 
     -#%h3 Platinum Sponsors
 
-    -#%h3 Silver Sponsors
+    %h3 Silver Sponsors
+
+    %ul.row.list-unstyled
+      %li.col-xs-6.col-sm-4.col-md-3.col-lg-2
+        = link_to 'http://eventbrite.com/jobs' do
+          = image_tag 'sponsors/eventbrite.svg', alt: 'Eventbrite Engineering', class: 'img-responsive sponsors'
 
     -#%h3 Basic Sponsors
 

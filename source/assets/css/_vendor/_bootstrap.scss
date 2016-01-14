@@ -314,7 +314,7 @@ $hr-border:                   $color-border;
   'bootstrap/list-group',
   //'bootstrap/panels',
   'bootstrap/responsive-embed',
-  //'bootstrap/wells',
+  'bootstrap/wells',
   //'bootstrap/close',
 
   // Components w/ JavaScript
@@ -469,14 +469,3 @@ footer.navbar .navbar-text { margin-left: 0; }
 .btn-link { padding: 0; }
 
 .speaker:nth-child(odd) { clear: both; }
-
-.embed-location,
-.logo-location { margin-bottom: 24px; }
-
-.logo-location {
-  margin: {
-    right: auto;
-    left:  auto;
-  }
-  max-width: 218px;
-}
