@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Jina -- Founder, Designer -- @jina
+
+# THANKS
+
+    Christopher Auyeung
+    Michael Yuan
+    Josh Silverman
+    Craig Villamor
+
+# TECHNOLOGY COLOPHON
+
+    ERB, HTML5, Haml, Markdown, Typogruby, 
+    CSS3, Sass, Normalize, Autoprefixer, 
+    Modernizr, jQuery, 
+    Middleman, HTML5 Boilerplate, Bootstrap, GitHub, Sublime Text, iTerm
